@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* 各実績詳細ページ */
+.mock_img {
+    width: 90%;
+}
+
+#website .list_content {
+    margin-bottom: 145px;
+}
+
+.works_detail_02 .detail_img {
+    width: 70%;
+}
+
+/* 4枚以上になったら消す */
+#banner .slick-track {
+    margin-left: 0;
+}
+
+#website .list_content {
+    margin-bottom: 145px;
+}
+
+/* 各実績詳細ページ */
+.web_detail_img_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 70px auto 0 auto;
+}
+
+.detail_img_pc {
+    width: 70%;
+}
+
+.detail_img_sp {
+    width: 25%;
+}
+
+.banner_detail_01 .text_point {
+    margin-bottom: 45px;
+}
+
+.banner_detail_01 .detail_img_wrap_01,
+.banner_detail_01 .detail_img_wrap_02 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 77%;
+    margin: 0 auto;
+}
+
+.banner_detail_01 .detail_img_wrap_01 {
+    margin-bottom: 100px;
+}
+
+.banner_detail_01 .detail_img_01 {
+    width: 47%;
+}
+
+.banner_detail_01 .detail_img_02 {
+    width: 47%;
+    margin-bottom: 3vw;
+}
+
+.banner_detail_02 .detail_img {
+    width: 45%;
+}
+
+.banner_detail_03 .detail_img {
+    width: 70%;
+}
+
+@media screen and (max-width: 767px) {
+    .web_detail_img_wrap {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .detail_img_pc,
+    .detail_img_sp {
+        margin-top: 70px;
+    }
+
+    .detail_img_pc {
+        width: 100%;
+    }
+
+    .detail_img_sp {
+        width: 70%;
+    }
+
+    .banner_detail_01 .detail_img_wrap_01,
+    .banner_detail_01 .detail_img_wrap_02 {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 77%;
+        margin: 0 auto;
+    }
+
+    .banner_detail_01 .detail_img_wrap_01 {
+        margin-bottom: 100px;
+    }
+
+    .banner_detail_01 .detail_img_01,
+    .banner_detail_01 .detail_img_02 {
+        width: 100%;
+        margin-bottom: 3vw;
+    }
+
+    .banner_detail_02 .detail_img {
+        width: 70%;
+    }
+}

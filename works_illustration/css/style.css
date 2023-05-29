@@ -1,0 +1,129 @@
+@charset "utf-8";
+
+/* 実績リストページ */
+
+.list_text {
+    margin-top: -15px;
+}
+
+.list_wrap h2::after {
+    transform: translateX(-25%) translateY(-5%) rotate(135deg);
+}
+
+/* 4枚以上になったら消す */
+#line .slick-track,
+#watercolor .slick-track {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .list_text {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .list_wrap h2::after {
+        transform: translateX(-25%) translateY(20%) rotate(135deg);
+    }
+}
+
+/* 各実績詳細ページ */
+.color_detail_img_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 70px auto 0 auto;
+}
+
+.color_detail_01 .color_detail_img_wrap {
+    width: 80%;
+}
+
+.detail_img_pc {
+    width: 70%;
+}
+
+.detail_img_sp {
+    width: 25%;
+}
+
+.color_detail_02 .detail_img_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 77%;
+    margin: 0 auto 100px auto;
+}
+
+.color_detail_02 .detail_img {
+    width: 30%;
+}
+
+.color_detail_03 .detail_img_square {
+    width: 45%;
+    margin: 70px auto 0 auto;
+}
+
+.color_detail_04 .detail_img_01 {
+    width: 50%;
+}
+
+.color_detail_04 .detail_img_02 {
+    width: 43%;
+}
+
+@media screen and (max-width: 767px) {
+    .color_detail_img_wrap {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .detail_img_pc,
+    .detail_img_sp {
+        margin-top: 70px;
+    }
+
+    .detail_img_pc {
+        width: 100%;
+    }
+
+    .detail_img_sp {
+        width: 70%;
+    }
+
+    .color_detail_01 .detail_img_sp {
+        width: 50%;
+    }
+
+    .color_detail_02 .detail_img_wrap {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        width: 77%;
+        margin: 0 auto;
+        margin-bottom: 3vw;
+    }
+
+    .color_detail_02 .detail_img {
+        width: 100%;
+    }
+
+    .color_detail_03 .detail_img_square {
+        width: 70%;
+    }
+
+    .color_detail_04 .color_detail_img_wrap {
+        margin-top: 70px;
+    }
+
+    .color_detail_04 .detail_img_01,
+    .color_detail_04 .detail_img_02 {
+        width: 100%;
+    }
+
+    .color_detail_04 .detail_img_01 {
+        margin-bottom: 70px;
+    }
+}

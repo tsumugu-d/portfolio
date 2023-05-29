@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/* 実績リストページ */
+.list_text {
+    margin-top: -35px;
+}
+
+.list_wrap h2::after {
+    transform: translateX(-25%) translateY(45%) rotate(135deg);
+}
+
+/* 4枚以上になったら消す */
+#logo .slick-track {
+    margin-left: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .list_text {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .list_wrap h2::after {
+        transform: translateX(-25%) translateY(75%) rotate(135deg);
+    }
+}
+
+/* 各実績詳細ページ */
+/* 印刷物 */
+.mock_img {
+    width: 90%;
+}
+
+.print_detail_01 .detail_img:first-child,
+.print_detail_01 .detail_img:last-child {
+    width: 35%;
+}
+
+.print_detail_03 .detail_img {
+    width: 47%;
+}
+
+.print_detail_04 .detail_img_wrap {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 70px auto;
+}
+
+.print_detail_04 .detail_img_01 {
+    width: 40%;
+}
+
+.print_detail_04 .detail_img_02,
+.print_detail_04 .detail_img_03 {
+    width: 40%;
+    margin: 70px auto 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+    .print_detail_03 .detail_img {
+        width: 70%;
+    }
+
+    .print_detail_04 .detail_img_wrap {
+        display: block;
+        width: 100%;
+    }
+
+    .print_detail_04 .detail_img_01 {
+        width: 40%;
+        margin: 0 auto 70px auto;
+    }
+
+    .print_detail_04 .detail_img_02,
+    .print_detail_04 .detail_img_03 {
+        width: 70%;
+    }
+}
+
+/* ロゴ */
+.logo_detail_01 .point_text {
+    margin-bottom: 70px;
+}
+
+.logo_detail_01 .detail_img_wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.logo_detail_01 .detail_img_01,
+.logo_detail_01 .detail_img_02 {
+    width: 45%;
+    margin-top: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .logo_detail_01 .detail_img_wrap {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .logo_detail_01 .detail_img_01,
+    .logo_detail_01 .detail_img_02 {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .logo_detail_01 .detail_img_02 {
+        margin-top: 70px;
+    }
+}
