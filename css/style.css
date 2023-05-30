@@ -773,6 +773,10 @@
         padding: 40px 3% 75px 3%;
     }
 
+    .works_wrap_02 ul li:hover {
+        margin-top: 0px;
+    }
+
     .pic_ink {
         display: none;
     }
