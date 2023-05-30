@@ -596,6 +596,7 @@ section {
 }
 
 .photo_slider .slick-prev {
+    top: 267px;
     left: -58px;
     transform: scale(-1, 1);
     z-index: 1;
