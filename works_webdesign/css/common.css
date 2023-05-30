@@ -617,7 +617,7 @@ section {
 
 .photo_slider .slick-prev::before,
 .photo_slider .slick-next::before {
-    background-image: url(../images/photo_slider_arrow.svg);
+    background-image: url(../../works_photo/images/photo_slider_arrow.svg);
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 1;
