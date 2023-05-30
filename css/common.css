@@ -71,7 +71,7 @@ img {
     border: none;
 }
 
-/* 背景など */
+/* 背景・動き */
 html {
     scroll-behavior: smooth;
 }
@@ -85,10 +85,10 @@ body {
 /* ヘッダー */
 .header_wrap {
     /* メニュー動き検証のため変更＋追加 */
-    /* position: fixed;
-    z-index: 999; */
+    position: fixed;
+    z-index: 999;
     /* ハンバーガーメニュー用にrelative追加 */
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -100,8 +100,16 @@ body {
     padding: 0 1% 0 4%;
 }
 
-/* メニューのスクロールに伴う動き検証 */
-/* #header_wrap.UpMove {
+.toppage .header_wrap {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    margin-bottom: 0;
+    background: rgba(255, 255, 255, 0.85);
+}
+
+/* メニューのスクロールに伴う動き */
+#header_wrap.UpMove {
     animation: UpAnime 0.5s forwards;
 }
 
@@ -129,16 +137,8 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-} */
-/* ここまで */
-
-.toppage .header_wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 0;
-    background: rgba(255, 255, 255, 0.85);
 }
+/* 動きここまで */
 
 .pc_nav {
     margin-left: auto;
@@ -289,8 +289,8 @@ nav li.has-child ul li:active > ul {
         width: 30px;
         height: 3px;
         border-radius: 2px;
-        /* トップと下層で色調整する */
         background: #736357;
+        /* background: white; */
         transition: 0.3s;
     }
 
@@ -318,6 +318,13 @@ nav li.has-child ul li:active > ul {
 
     .sp_btn span::after {
         top: 10px;
+    }
+
+    /* トップページスクロール後 */
+    #btn_span.changeColor,
+    #btn_span::before.changeColor,
+    #btn_span::after.changeColor {
+        background: #736357;
     }
 
     /* ハンバーガー閉じる */
@@ -499,7 +506,7 @@ h2 {
 }
 
 /* フッター */
-footer {
+#footer {
     position: relative;
     width: 100%;
     height: 100%;
@@ -522,36 +529,46 @@ footer {
     z-index: 1;
 }
 
-footer ul {
+#footer ul {
     position: relative;
     top: -47px;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-footer ul ul {
+#footer ul ul {
     display: block;
-    background: none !important;
-    top: 45px !important;
+    background: none;
+    top: 3px;
 }
 
-footer ul li {
+#footer ul li {
     position: relative;
     font-size: 18px;
 }
 
-footer ul li a {
+#footer ul li.has-child {
+    margin-right: 0;
+}
+
+#footer ul li.has-child::before {
+    top: 27px;
+    left: 165px;
+}
+
+#footer ul li a {
     /* ホバーアニメーション用にrelative追加 */
     position: relative;
     display: block;
     margin: 24px 30px;
     transition: all 0.3s;
+    text-align: center;
 }
 
-footer ul li li a {
+#footer ul li li a {
     display: flex;
     align-items: center;
     margin: 20px 30px;
@@ -559,7 +576,7 @@ footer ul li li a {
     font-size: 16px;
 }
 
-footer ul li a::after {
+#footer ul li a::after {
     content: "";
     position: absolute;
     display: block;
@@ -579,30 +596,29 @@ footer ul li a::after {
     transition: all 0.5s ease;
 }
 
-footer ul li a:hover::after {
+#footer ul li a:hover::after {
     /*横方向等倍まで拡大*/
     transform: scale(1, 1);
 }
 
-footer ul li li a::before {
+#footer ul li li a::before {
     content: "";
     border-top: 1px solid;
     width: 0.8em;
     margin-right: 1em;
 }
 
-footer ul li.has-child:hover > ul,
-footer ul li.has-child ul li:hover > ul,
-footer ul li.has-child:active > ul,
-footer ul li.has-child ul li:active > ul {
+#footer ul li.has-child:hover > ul,
+#footer ul li.has-child ul li:hover > ul,
+#footer ul li.has-child:active > ul,
+#footer ul li.has-child ul li:active > ul {
     visibility: visible;
     opacity: 1;
 }
 
-footer p {
+#footer p {
     position: relative;
     z-index: 1;
-    margin-top: 130px;
     padding-bottom: 30px;
     font-size: 13px;
     letter-spacing: 0.1em;
@@ -618,6 +634,7 @@ footer p {
     height: 220px;
     background-image: url(../images/top_btn.svg);
     background-size: cover;
+    z-index: 2;
 }
 
 .pagetop a {
@@ -631,17 +648,18 @@ footer p {
 }
 
 @media screen and (max-width: 1000px) {
-    footer ul {
+    #footer ul {
         flex-direction: column;
+        align-items: center;
     }
 
-    footer li.has-child {
+    #footer li.has-child {
         margin-right: 0;
     }
 
-    footer li.has-child ul {
+    #footer li.has-child ul {
         position: relative;
-        left: 40px !important;
+        left: 40px;
         top: 0;
         width: 100%;
         visibility: visible; /*JSで制御するため一旦表示*/
@@ -650,33 +668,33 @@ footer p {
         transition: none; /*JSで制御するためCSSのアニメーションを切る*/
     }
 
-    footer ul li {
+    #footer ul li {
         font-size: 15px;
     }
 
-    footer ul li a {
+    #footer ul li a {
         margin: 15px 30px;
     }
 
-    footer ul li.has-child::before {
+    #footer ul li.has-child::before {
         left: 133px;
         top: 16px;
     }
 
-    footer ul ul {
-        top: 0 !important;
+    #footer ul ul {
+        top: 0;
     }
 
-    footer ul ul li.has-child::before {
+    #footer ul ul li.has-child::before {
         transform: rotate(135deg);
         left: 20px;
     }
 
-    footer ul li.has-child.active::before {
+    #footer ul li.has-child.active::before {
         transform: rotate(-45deg);
     }
 
-    footer ul li li a {
+    #footer ul li li a {
         font-size: 14px;
     }
 
@@ -696,7 +714,7 @@ footer p {
 }
 
 @media screen and (max-width: 767px) {
-    footer {
+    #footer {
         margin-top: 200px;
         background-image: url(../images/footer_img_sp.svg);
         background-repeat: repeat;
@@ -707,29 +725,29 @@ footer p {
         width: 95px;
     }
 
-    footer ul {
+    #footer ul {
         top: -30px;
     }
 
-    footer ul li a {
+    #footer ul li a {
         margin: 10px 30px;
     }
 
-    footer ul li a::after {
+    #footer ul li a::after {
         bottom: 0;
     }
 
-    footer ul li li a {
+    #footer ul li li a {
         margin: 8px 30px;
     }
 
-    footer ul li.has-child::before {
+    #footer ul li.has-child::before {
         left: 126px;
         top: 18px;
     }
 
-    footer p {
-        margin-top: 10px;
+    #footer p {
+        margin-top: 35px;
         font-size: 10px;
     }
 }

@@ -9,6 +9,23 @@
     width: 100%;
 }
 
+.fade {
+    animation-name: fadeInAnime;
+    animation-duration: 2.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInAnime {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .header_logo {
     position: absolute;
     top: 35%;
@@ -1329,6 +1346,7 @@
     }
 
     .area p {
+        margin-bottom: 0;
         padding-left: 10%;
         font-size: 15px;
         line-height: 2;
@@ -1346,6 +1364,10 @@
 }
 
 /* サンクスページ */
+.thankspage #main {
+    padding-top: 200px;
+}
+
 .thankyou {
     display: flex;
     align-items: center;
@@ -1369,6 +1391,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+    .thankspage #main {
+        padding-top: 20vw;
+    }
+
     .thankyou {
         margin: 0 5%;
     }
@@ -1379,6 +1405,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .thankspage #main {
+        padding-top: 30vw;
+    }
+
     .thankyou {
         flex-direction: column;
     }

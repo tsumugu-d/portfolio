@@ -72,39 +72,42 @@ $(function () {
 });
 // ハンバーガーメニューここまで
 
-// // グローバルメニュー動き
-// var beforePos = 0; //スクロールの値の比較用の設定
+// グローバルメニュー動き
+var beforePos = 0; //スクロールの値の比較用の設定
 
-// //スクロール途中でヘッダーが消え、上にスクロールすると復活する設定を関数にまとめる
-// function ScrollAnime() {
-//     var elemTop = $("#main").offset().top; //#mainの位置まできたら
-//     var scroll = $(window).scrollTop();
-//     //ヘッダーの出し入れをする
-//     if (scroll == beforePos) {
-//         //IE11対策で処理を入れない
-//     } else if (elemTop > scroll || 0 > scroll - beforePos) {
-//         //ヘッダーが上から出現する
-//         $("#header_wrap").removeClass("UpMove"); //.header_wrapにUpMoveというクラス名を除き
-//         $("#header_wrap").addClass("DownMove"); //.header_wrapにDownMoveのクラス名を追加
-//     } else {
-//         //ヘッダーが上に消える
-//         $("#header_wrap").removeClass("DownMove"); //.header_wrapにDownMoveというクラス名を除き
-//         $("#header_wrap").addClass("UpMove"); //.header_wrapにUpMoveのクラス名を追加
-//     }
+//スクロール途中でヘッダーが消え、上にスクロールすると復活する設定を関数にまとめる
+function ScrollAnime() {
+    var elemTop = $("#main").offset().top; //#mainの位置まできたら
+    var scroll = $(window).scrollTop();
+    //ヘッダーの出し入れをする
+    if (scroll == beforePos) {
+        //IE11対策で処理を入れない
+    } else if (elemTop > scroll || 0 > scroll - beforePos) {
+        //ヘッダーが上から出現する
+        $("#header_wrap").removeClass("UpMove"); //.header_wrapにUpMoveというクラス名を除き
+        $("#header_wrap").addClass("DownMove"); //.header_wrapにDownMoveのクラス名を追加
+    } else {
+        //ヘッダーが上に消える
+        $("#header_wrap").removeClass("DownMove"); //.header_wrapにDownMoveというクラス名を除き
+        $("#header_wrap").addClass("UpMove"); //.header_wrapにUpMoveのクラス名を追加
+        $("#btn_span").addClass("changeColor");
+        // $("#btn_span::before").addClass("changeColor");
+        // $("#btn_span::after").addClass("changeColor");
+    }
 
-//     beforePos = scroll; //現在のスクロール値を比較用のbeforePosに格納
-// }
+    beforePos = scroll; //現在のスクロール値を比較用のbeforePosに格納
+}
 
-// // 画面をスクロールをしたら動かしたい場合の記述
-// $(window).scroll(function () {
-//     ScrollAnime(); //スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
-// });
+// 画面をスクロールをしたら動かしたい場合の記述
+$(window).scroll(function () {
+    ScrollAnime(); //スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
+});
 
-// // ページが読み込まれたらすぐに動かしたい場合の記述
-// $(window).on("load", function () {
-//     ScrollAnime(); //スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
-// });
-// // グローバルメニュー動きここまで
+// ページが読み込まれたらすぐに動かしたい場合の記述
+$(window).on("load", function () {
+    ScrollAnime(); //スクロール途中でヘッダーが消え、上にスクロールすると復活する関数を呼ぶ
+});
+// グローバルメニュー動きここまで
 
 // フェードインアニメーション
 $(function () {

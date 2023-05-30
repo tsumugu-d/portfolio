@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>つむぐ。デザイン｜物語をつむぐように、デザインをつくる。</title>
-    <meta name="description" content="福井県を拠点に活動するwebデザイナー「碧井」のポートフォリオです。">
+    <meta name="description" content="福井県を拠点に活動するwebデザイナーkameiのポートフォリオです。">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-192x192.png">
@@ -20,13 +20,11 @@
 
 <body class="toppage">
     <header id="header">
-        <picture>
+        <picture class="fade">
             <source srcset="images/mainvisual_sp@2x-80.jpg" media="(max-width:767px)">
             <img src="images/mainvisual_pc@3x-80.jpg" alt="メインビジュアル">
         </picture>
-        <!-- <div class="header_wrap DownMove"> -->
         <div id="header_wrap" class="header_wrap DownMove">
-            <!-- <h1>つむぐ。デザイン</h1> -->
             <nav class="pc_nav">
                 <ul>
                     <li><a href="#concept">はじめに</a></li>
@@ -43,7 +41,7 @@
                     <li><a href="#about">作者あとがき</a></li>
                 </ul>
             </nav>
-            <div class="sp_btn"><span></span></div>
+            <div class="sp_btn"><span id="btn_span"></span></div>
             <nav class="sp_nav">
                 <ul>
                     <li><a href="#concept">はじめに</a></li>
@@ -61,17 +59,16 @@
                 </ul>
             </nav>
         </div>
-        <div class="header_logo">
+        <div class="header_logo fade">
             <h1><img src="images/tsumugu_logo.svg" alt="つむぐ。デザイン"></h1>
             <p>物語をつむぐように、<br>デザインをつくる。</p>
         </div>
-        <div class="scrolldown"><span>Scroll</span></div>
+        <div class="scrolldown fade"><span>Scroll</span></div>
     </header>
 
     <main id="main">
         <section id="concept">
-            <h2 class="title_left">はじめに</h2>
-            <div class="line_left"></div>
+            <h2 class="title_left element">はじめに</h2>
             <div class="concept_slider element">
                 <picture>
                     <source srcset="images/concept_01_sp@3x.png" media="(max-width:767px)">
@@ -91,13 +88,13 @@
 
         <section id="skills">
             <div class="skill_top_sp">
-                <p class="lead_sp">
+                <p class="lead_sp  element">
                     デザインからコーディング、イラスト制作、写真撮影・編集まで、トータルでご提案することができます。
                 </p>
-                <h2 class="title_right">できること</h2>
+                <h2 class="title_right  element">できること</h2>
             </div>
             <div class="skill_top">
-                <p class="lead">
+                <p class="lead  element">
                     デザインからコーディング、イラスト制作、写真撮影・編集まで、トータルでご提案することができます。
                 </p>
                 <section class="skill_wrap_left element">
@@ -157,7 +154,7 @@
         </section>
 
         <section id="works">
-            <h2 class="title_left">つくったもの</h2>
+            <h2 class="title_left element">つくったもの</h2>
             <div class="works_wrap_01 element">
                 <div class="works_wrap_02">
                     <div class="pic_ink"><img src="images/line_ink.svg" alt="インク壺と羽ペン"></div>
@@ -179,7 +176,7 @@
         </section>
 
         <section id="contact">
-            <div class="contact_wrap">
+            <div class="contact_wrap element">
                 <h2 class="title_right">相談する</h2>
                 <p class="lead">デザインやイラスト、写真に関することなど、お客様が抱えているお悩みなどについて、お気軽にご相談・お問い合わせください。</p>
             </div>
@@ -208,7 +205,7 @@
         </section>
 
         <section id="about">
-            <div class="about_wrap_01">
+            <div class="about_wrap_01 element">
                 <h2 class="title_left">作者<br>　あとがき</h2>
                 <p class="lead">
                     当サイトを最後までご覧いただき、<br class="br_sp">ありがとうございました。<br>
@@ -308,7 +305,7 @@
         </section>
     </main>
 
-    <footer class="footer_wrap">
+    <footer id="footer" class="footer_wrap">
         <div class="footer_logo"><a href="index.html"><img src="images/tsumugu_logo.svg" alt="つむぐ。デザインロゴ"></a></div>
         <ul>
             <li><a href="#concept">はじめに</a></li>
