@@ -90,7 +90,11 @@ function ScrollAnime() {
         //ヘッダーが上に消える
         $("#header_wrap").removeClass("DownMove"); //.header_wrapにDownMoveというクラス名を除き
         $("#header_wrap").addClass("UpMove"); //.header_wrapにUpMoveのクラス名を追加
-        $("#btn_span").addClass("changeColor");
+        // $(".toppage .sp_btn span").addClass("changeColor");
+        // $(".toppage .sp_btn span::before").addClass("changeColor");
+        // $(".toppage .sp_btn span::after").addClass("changeColor");
+
+        // $("#btn_span").addClass("changeColor");
         // $("#btn_span::before").addClass("changeColor");
         // $("#btn_span::after").addClass("changeColor");
     }
@@ -125,31 +129,31 @@ $(function () {
 });
 // フェードインアニメーションここまで
 
-// タッチデバイスでのhover解除
-var touch =
-    "ontouchstart" in document.documentElement ||
-    navigator.maxTouchPoints > 0 ||
-    navigator.msMaxTouchPoints > 0;
+// // タッチデバイスでのhover解除
+// var touch =
+//     "ontouchstart" in document.documentElement ||
+//     navigator.maxTouchPoints > 0 ||
+//     navigator.msMaxTouchPoints > 0;
 
-if (touch) {
-    // remove all :hover stylesheets
-    try {
-        // prevent exception on browsers not supporting DOM styleSheets properly
-        for (var si in document.styleSheets) {
-            var styleSheet = document.styleSheets[si];
-            if (!styleSheet.rules) continue;
+// if (touch) {
+//     // remove all :hover stylesheets
+//     try {
+//         // prevent exception on browsers not supporting DOM styleSheets properly
+//         for (var si in document.styleSheets) {
+//             var styleSheet = document.styleSheets[si];
+//             if (!styleSheet.rules) continue;
 
-            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                if (!styleSheet.rules[ri].selectorText) continue;
+//             for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+//                 if (!styleSheet.rules[ri].selectorText) continue;
 
-                if (styleSheet.rules[ri].selectorText.match(":hover")) {
-                    styleSheet.deleteRule(ri);
-                }
-            }
-        }
-    } catch (ex) {}
-}
-// タッチデバイスでのhover解除ここまで
+//                 if (styleSheet.rules[ri].selectorText.match(":hover")) {
+//                     styleSheet.deleteRule(ri);
+//                 }
+//             }
+//         }
+//     } catch (ex) {}
+// }
+// // タッチデバイスでのhover解除ここまで
 
 // はじめに部分のスライダー
 $(function () {
