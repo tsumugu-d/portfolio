@@ -406,6 +406,7 @@
 }
 
 #skills .lead {
+    width: 10%;
     height: 440px;
     margin-top: 20px;
     margin-right: 12%;
@@ -463,6 +464,7 @@
 .skill_wrap_left h3,
 .skill_wrap_right h3 {
     display: flex;
+    width: 20%;
     align-items: center;
     height: 395px;
     /* height: 39vw;
@@ -489,7 +491,7 @@
 .skill_content {
     display: flex;
     flex-direction: column;
-    width: 76%;
+    width: 80%;
 }
 
 .skill_wrap_left .skill_content {
@@ -498,7 +500,7 @@
 }
 
 .skill_wrap_right .skill_content {
-    padding: 70px 41px 55px 35px;
+    padding: 70px 50px 55px 30px;
     box-sizing: border-box;
 }
 
@@ -819,7 +821,6 @@
 .contact_content {
     position: relative;
     width: 100%;
-    /* background: yellow; */
     margin: 100px auto 0 auto;
 }
 
