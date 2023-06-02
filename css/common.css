@@ -326,8 +326,8 @@ nav li.has-child ul li:active > ul {
 
     /* トップページスクロール後 */
     .toppage .sp_btn span.changeColor,
-    .toppage .sp_btn span::before.changeColor,
-    .toppage .sp_btn span::after.changeColor {
+    .toppage .sp_btn span.changeColor::before,
+    .toppage .sp_btn span.changeColor::after {
         background: #736357;
     }
 
@@ -344,6 +344,10 @@ nav li.has-child ul li:active > ul {
     .sp_btn.open span::after {
         top: 0;
         transform: rotate(135deg);
+    }
+
+    .toppage .sp_btn.open span {
+        background: transparent;
     }
 
     .toppage .sp_btn.open span::before,
